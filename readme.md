@@ -20,6 +20,10 @@ A simple and interactive Rock Paper Scissors game built with HTML, CSS, and Java
    - ✊ Rock
    - ✋ Paper
    - ✌️ Scissors
+   - **Or use your keyboard:**
+     - Press `R` for Rock
+     - Press `P` for Paper
+     - Press `S` for Scissors
 
 3. **View the result:**  
    After each round, see if you win, lose, or tie. Your choice and the computer's choice will be displayed with emojis.

@@ -19,6 +19,15 @@
           isAutoPlaying = false;
         }
       };
+      document.body.addEventListener('keydown', (event) => {
+        if (event.key === 'r') {
+          playGame('rock');
+        } else if (event.key === 'p') {
+          playGame('paper');
+        } else if (event.key === 's') {
+          playGame('scissors');
+        }
+      });
 
       function playGame(playerMove) {
         const computerMove = pickComputerMove();
@@ -65,8 +74,8 @@
         updateScoreElement();
         document.querySelector('.js-result').innerHTML = result;
         document.querySelector('.js-moves').innerHTML = `You 
-      <img src="/Rock-scissor_project/Images/${playerMove}-emoji.png" class="move-icon">
-      <img src="/Rock-scissor_project/Images/${computerMove}-emoji.png" class="move-icon">Computer.`;
+      <img src="./Images/${playerMove}-emoji.png" class="move-icon">
+      <img src="./Images/${computerMove}-emoji.png" class="move-icon">Computer.`;
       }
       function updateScoreElement(){
           document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`
